@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "569dd50e-2278-4bcf-b099-04340802298a",
+		"_postman_id": "be80b205-2a0d-4f99-8449-5e8636a7b15e",
 		"name": "platzi-pizza",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "14008309"
+		"_exporter_id": "5125046"
 	},
 	"item": [
 		{
@@ -12,6 +12,21 @@
 				{
 					"name": "Get pizzas",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -501,6 +516,46 @@
 								"customers",
 								"phone",
 								"(792) 406-8858"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login (JWT)",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth"
 							]
 						}
 					},
